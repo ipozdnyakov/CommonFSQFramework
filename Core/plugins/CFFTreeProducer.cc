@@ -37,6 +37,7 @@
 #include "CommonFSQFramework/Core/interface/CastorJetView.h"
 
 #include "CommonFSQFramework/Core/interface/JetView.h"
+#include "CommonFSQFramework/Core/interface/JetSimpleView.h"
 #include "CommonFSQFramework/Core/interface/TrackJetView.h"
 #include "CommonFSQFramework/Core/interface/TriggerResultsView.h"
 #include "CommonFSQFramework/Core/interface/GenericCandidateView.h"
@@ -126,6 +127,9 @@ CFFTreeProducer::CFFTreeProducer(const edm::ParameterSet& iConfig)
         else if (miniViewType == "JetView") {
             m_views.push_back(new JetView(pset, m_tree, this->consumesCollector()));
         }
+	else if (miniViewType == "JetSimpleView") {
+            m_views.push_back(new JetSimpleView(pset, m_tree, this->consumesCollector()));
+	}
         else if (miniViewType == "TriggerResultsView") {
             m_views.push_back(new TriggerResultsView(pset, m_tree, this->consumesCollector(), this));
         }

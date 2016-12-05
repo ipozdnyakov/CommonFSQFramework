@@ -24,7 +24,7 @@ EventViewBase(iConfig, tree)
     registerInt("run", tree);
     registerInt("lumi", tree);
     registerInt("event", tree);
-    registerInt("bx",tree);
+//    registerInt("bx",tree);
     
     registerFloat("genWeight", tree);
     registerFloat("alphaQCD", tree);
@@ -60,7 +60,7 @@ void EventIdData::fillSpecific(const edm::Event& iEvent, const edm::EventSetup& 
     setI("event", iEvent.eventAuxiliary().event());
     
     // data only part
-    if (iEvent.isRealData()) {
+/*    if (iEvent.isRealData()) {
     	setI("bx", iEvent.bunchCrossing());
 	try {
 	    // Get instantanious lumi information
@@ -75,7 +75,7 @@ void EventIdData::fillSpecific(const edm::Event& iEvent, const edm::EventSetup& 
 	    if (localcount == 1) std::cout << " An exception was thrown when accessing the LumiDetails and/or the LumiSummary objects. This means they are not present and are not correctly filled in the ntuple" << std::endl;
 	}
     }
-
+*/
 
     // start MC part
     if (iEvent.isRealData()) return;

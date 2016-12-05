@@ -17,7 +17,7 @@ else:
 ##########################
 process = cms.Process("Treemaker")
 process.load("FWCore.MessageService.MessageLogger_cfi")
-process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(10000))
+process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1000))
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
 process.options = cms.untracked.PSet(wantSummary = cms.untracked.bool(True))
 
@@ -45,12 +45,12 @@ process = CommonFSQFramework.Core.customizePAT.customizeGT(process)
 
 process.JetTree = cms.EDAnalyzer("CFFTreeProducer")
 
-import CommonFSQFramework.Core.JetViewsConfigs
+import CommonFSQFramework.Core.JetSimpleViewsConfigs
 import CommonFSQFramework.Core.TriggerResultsViewsConfigs
 
-process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.JetViewsConfigs.get(["slimmedJetsPt10"]))
+process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.JetSimpleViewsConfigs.get(["slimmedJetsPt10"]))
 
-if isData:
-	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.TriggerResultsViewsConfigs.get(["HLT_DiPFJet15_NoCaloMatched_v*","HLT_DiPFJet15_FBEta2_NoCaloMatched_v*"]))
+#if isData:
+#	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.TriggerResultsViewsConfigs.get(["HLT_DiPFJet15_NoCaloMatched_v*","HLT_DiPFJet15_FBEta2_NoCaloMatched_v*"]))
 
 process = CommonFSQFramework.Core.customizePAT.addTreeProducer(process, process.JetTree)
