@@ -121,7 +121,10 @@ CFFTreeProducer::CFFTreeProducer(const edm::ParameterSet& iConfig)
 
         prefixes.insert(prefix);
 
-        if (miniViewType == "TrackJetView") {
+        if (miniViewType == "EventIdData") {
+	    m_views.push_back(new EventIdData(edm::ParameterSet(), m_tree, this->consumesCollector()));
+        }
+        else if (miniViewType == "TrackJetView") {
             m_views.push_back(new TrackJetView(pset, m_tree, this->consumesCollector()));
         }
         else if (miniViewType == "JetView") {
@@ -180,10 +183,6 @@ CFFTreeProducer::CFFTreeProducer(const edm::ParameterSet& iConfig)
         }
 
     }
-
-    // run/event number
-    m_views.push_back(new EventIdData(edm::ParameterSet(), m_tree, this->consumesCollector()));
-
 
 }
 
