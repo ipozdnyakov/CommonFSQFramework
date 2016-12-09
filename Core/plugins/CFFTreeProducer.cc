@@ -28,6 +28,7 @@
 #include <DataFormats/PatCandidates/interface/TriggerEvent.h>
 
 #include "CommonFSQFramework/Core/interface/EventIdData.h"
+#include "CommonFSQFramework/Core/interface/EventSimpleView.h"
 #include "CommonFSQFramework/Core/interface/GenPartView.h"
 #include "CommonFSQFramework/Core/interface/GenJetView.h"
 #include "CommonFSQFramework/Core/interface/RecoTrackView.h"
@@ -122,7 +123,10 @@ CFFTreeProducer::CFFTreeProducer(const edm::ParameterSet& iConfig)
         prefixes.insert(prefix);
 
         if (miniViewType == "EventIdData") {
-	    m_views.push_back(new EventIdData(edm::ParameterSet(), m_tree, this->consumesCollector()));
+	    m_views.push_back(new EventIdData(pset, m_tree, this->consumesCollector()));
+        }
+        else if (miniViewType == "EventSimpleView") {
+	    m_views.push_back(new EventSimpleView(pset, m_tree, this->consumesCollector()));
         }
         else if (miniViewType == "TrackJetView") {
             m_views.push_back(new TrackJetView(pset, m_tree, this->consumesCollector()));

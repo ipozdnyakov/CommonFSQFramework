@@ -3,6 +3,23 @@ import FWCore.ParameterSet.Config as cms
 def get(todo):
     defs = {}
 
+    defs["LargeDyTriggerResultsView"]  = cms.PSet(
+        miniView = cms.string("TriggerResultsView"),
+        branchPrefix = cms.untracked.string("trg"),
+        process = cms.string("HLT"),
+        storePrescales = cms.bool(True),
+        triggers = cms.vstring(
+		"HLT_PFJet15_NoCaloMatched_v2",
+		"HLT_PFJet15_FwdEta2_NoCaloMatched_v2",
+		"HLT_PFJet15_FwdEta3_NoCaloMatched_v2",
+		"HLT_DiPFJetAve15_HFJEC_v2",
+		"HLT_DiPFJetAve15_Central_v2",
+		"HLT_DiPFJet15_NoCaloMatched_v2",
+		"HLT_DiPFJet15_FBEta2_NoCaloMatched_v2",
+		"HLT_DiPFJet15_FBEta3_NoCaloMatched_v2",
+	),
+    )
+
     # ZeroBias trigger configuration
     defs["ZeroBiasTriggerResultsView"]  = cms.PSet(
         miniView = cms.string("TriggerResultsView"),

@@ -3,7 +3,6 @@
 
 #include "CommonFSQFramework/Core/interface/EventViewBase.h"
 #include "DataFormats/PatCandidates/interface/Jet.h"
-
 #include "CondFormats/JetMETObjects/interface/JetCorrectionUncertainty.h"
 
 class JetSimpleView: public EventViewBase{

@@ -25,6 +25,7 @@ process.options = cms.untracked.PSet(wantSummary = cms.untracked.bool(True))
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
 	'/store/data/Run2015C_25ns/FSQJets3/MINIAOD/16Dec2015-v1/50000/002FBD2D-AEAF-E511-BB6D-00261894386F.root'
+	#'/store/data/Run2015D/FSQJets3/MINIAOD/16Dec2015-v1/50000/005F6405-1FAE-E511-AC03-0025905A60E0.root'
     )
 )
 
@@ -46,11 +47,12 @@ process = CommonFSQFramework.Core.customizePAT.customizeGT(process)
 process.JetTree = cms.EDAnalyzer("CFFTreeProducer")
 
 import CommonFSQFramework.Core.JetSimpleViewsConfigs
+import CommonFSQFramework.Core.EventSimpleViewsConfigs
 import CommonFSQFramework.Core.TriggerResultsViewsConfigs
 
-process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.JetSimpleViewsConfigs.get(["slimmedJetsPt10"]))
-
-#if isData:
-#	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.TriggerResultsViewsConfigs.get(["HLT_DiPFJet15_NoCaloMatched_v*","HLT_DiPFJet15_FBEta2_NoCaloMatched_v*"]))
+if isData:
+	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.JetSimpleViewsConfigs.get(["slimmedJetsPt10"]))
+	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.EventSimpleViewsConfigs.get(["simpleEventInfo"]))
+	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.TriggerResultsViewsConfigs.get(["LargeDyTriggerResultsView"]))
 
 process = CommonFSQFramework.Core.customizePAT.addTreeProducer(process, process.JetTree)
