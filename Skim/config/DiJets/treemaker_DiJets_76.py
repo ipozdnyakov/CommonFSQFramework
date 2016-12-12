@@ -17,15 +17,15 @@ else:
 ##########################
 process = cms.Process("Treemaker")
 process.load("FWCore.MessageService.MessageLogger_cfi")
-process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1000))
+process.maxEvents = cms.untracked.PSet(input = cms.untracked.int32(1))
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
 process.options = cms.untracked.PSet(wantSummary = cms.untracked.bool(True))
 
 # Source
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
+	#setenv TMFSampleName data_FSQJets3:
 	'/store/data/Run2015C_25ns/FSQJets3/MINIAOD/16Dec2015-v1/50000/002FBD2D-AEAF-E511-BB6D-00261894386F.root'
-	#'/store/data/Run2015D/FSQJets3/MINIAOD/16Dec2015-v1/50000/005F6405-1FAE-E511-AC03-0025905A60E0.root'
     )
 )
 
@@ -46,13 +46,20 @@ process = CommonFSQFramework.Core.customizePAT.customizeGT(process)
 
 process.JetTree = cms.EDAnalyzer("CFFTreeProducer")
 
-import CommonFSQFramework.Core.JetSimpleViewsConfigs
 import CommonFSQFramework.Core.EventSimpleViewsConfigs
+import CommonFSQFramework.Core.JetSimpleViewsConfigs
 import CommonFSQFramework.Core.TriggerResultsViewsConfigs
 
+import CommonFSQFramework.Core.EventMCSimpleViewsConfigs
+import CommonFSQFramework.Core.JetMCSimpleViewsConfigs
+
 if isData:
-	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.JetSimpleViewsConfigs.get(["slimmedJetsPt10"]))
 	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.EventSimpleViewsConfigs.get(["simpleEventInfo"]))
+	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.JetSimpleViewsConfigs.get(["slimmedJetsPt10"]))
 	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.TriggerResultsViewsConfigs.get(["LargeDyTriggerResultsView"]))
+else:
+	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.MCEventSimpleViewsConfigs.get(["simpleMCEventInfo"]))
+	process.JetTree._Parameterizable__setParameters(CommonFSQFramework.Core.JetMCSimpleViewsConfigs.get(["slimmedMCJetsPt10"]))
+
 
 process = CommonFSQFramework.Core.customizePAT.addTreeProducer(process, process.JetTree)

@@ -27,7 +27,7 @@ def DS(ds):
 def name(ds):
     split=ds.split("/") 
     if len(split) == 0: return None    
-    if not isData(ds): return split[1]
+    if not isData(ds): return split[1]+"_"+split[2]
     if isData(ds): return "data_"+split[1]
 
 def isData(ds):
@@ -54,7 +54,7 @@ def numEvents(ds):
 
 def GT(ds):
     if isData(ds) and "Run2015" in ds: return "76X_dataRun2_16Dec2015_v0"
-    return ""
+    return "76X_mcRun2_asymptotic_RunIIFall15DR76_v1"
     
 def XS(ds):
     #Note: all cross sections given in pb -- http://iopscience.iop.org/0295-5075/96/2/21002 --- LHCtotal= 73.5 mili b
@@ -66,13 +66,7 @@ def XS(ds):
     # list all datasets
     # Give all XS in pb
     s = {}
-    s["MinBias_TuneMonash13_13TeV-pythia8"] = 78418400000.0 # from DAS - McM
-    s["ReggeGribovPartonMC_13TeV-EPOS"] = 78418400000.0
-    s["ReggeGribovPartonMC_13TeV-QGSJetII"] = 78418400000.0
-    s["MinBias_TuneZ2star_13TeV-pythia6"] = 78260000000.0
-    s["MinBias_TuneCUETP8M1_13TeV-pythia8"] = 78418400000.0
-    s["MinBias_TuneMBR_13TeV-pythia8"] = 78418400000.0
-    s["MinBias_TuneEE5C_13TeV-herwigpp"] = 36460000000.0
+    s["x"] = 0.0 # from DAS - McM
 
 
     dsName = name(ds)
