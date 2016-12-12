@@ -29,6 +29,7 @@
 
 #include "CommonFSQFramework/Core/interface/EventIdData.h"
 #include "CommonFSQFramework/Core/interface/EventSimpleView.h"
+#include "CommonFSQFramework/Core/interface/EventMCSimpleView.h"
 #include "CommonFSQFramework/Core/interface/GenPartView.h"
 #include "CommonFSQFramework/Core/interface/GenJetView.h"
 #include "CommonFSQFramework/Core/interface/RecoTrackView.h"
@@ -39,6 +40,7 @@
 
 #include "CommonFSQFramework/Core/interface/JetView.h"
 #include "CommonFSQFramework/Core/interface/JetSimpleView.h"
+#include "CommonFSQFramework/Core/interface/JetMCSimpleView.h"
 #include "CommonFSQFramework/Core/interface/TrackJetView.h"
 #include "CommonFSQFramework/Core/interface/TriggerResultsView.h"
 #include "CommonFSQFramework/Core/interface/GenericCandidateView.h"
@@ -128,6 +130,9 @@ CFFTreeProducer::CFFTreeProducer(const edm::ParameterSet& iConfig)
         else if (miniViewType == "EventSimpleView") {
 	    m_views.push_back(new EventSimpleView(pset, m_tree, this->consumesCollector()));
         }
+        else if (miniViewType == "EventMCSimpleView") {
+	    m_views.push_back(new EventMCSimpleView(pset, m_tree, this->consumesCollector()));
+        }
         else if (miniViewType == "TrackJetView") {
             m_views.push_back(new TrackJetView(pset, m_tree, this->consumesCollector()));
         }
@@ -136,6 +141,9 @@ CFFTreeProducer::CFFTreeProducer(const edm::ParameterSet& iConfig)
         }
 	else if (miniViewType == "JetSimpleView") {
             m_views.push_back(new JetSimpleView(pset, m_tree, this->consumesCollector()));
+	}
+	else if (miniViewType == "JetMCSimpleView") {
+            m_views.push_back(new JetMCSimpleView(pset, m_tree, this->consumesCollector()));
 	}
         else if (miniViewType == "TriggerResultsView") {
             m_views.push_back(new TriggerResultsView(pset, m_tree, this->consumesCollector(), this));
