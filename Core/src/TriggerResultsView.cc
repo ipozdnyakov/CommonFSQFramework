@@ -94,9 +94,9 @@ void TriggerResultsView::fillSpecific(const edm::Event& iEvent, const edm::Event
     }
 
     const std::vector< std::string > names = trbn.triggerNames(); 
-    for (unsigned int i = 0; i<names.size(); ++i){
-        std::cout << names.at(i) << std::endl;
-    }
+    //for (unsigned int i = 0; i<names.size(); ++i){
+    //    std::cout << names.at(i) << std::endl;
+    //}
 
 
     edm::Handle<L1GlobalTriggerReadoutRecord> gtReadoutRecord;

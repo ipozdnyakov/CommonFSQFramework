@@ -13,6 +13,7 @@ class JetMCSimpleView: public EventViewBase{
       virtual void fillSpecific(const edm::Event&, const edm::EventSetup&);
 
       edm::InputTag	m_JetsCollection;
+      edm::InputTag	m_GenJetsCollection;
       std::string	m_JetsPayload;
       float		m_minPt;
 

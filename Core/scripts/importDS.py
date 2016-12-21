@@ -27,6 +27,7 @@ def getSEDirsCrab3(anaVersion, name):
     taskDir = os.path.join(anaVersion, "crab_"+anaVersion+"_"+name)
     print " in taskdir: ", taskDir
     output = subprocess.check_output(["crab", "getoutput", "--dump", taskDir])
+    print output
     SEDirs = set()
     for l in output.splitlines():
         filename = l.split("/")[-1]

@@ -14,6 +14,7 @@ JetMCSimpleView::JetMCSimpleView(const edm::ParameterSet& iConfig, TTree * tree,
 EventViewBase(iConfig, tree), m_jecUnc(0)
 {
     m_JetsCollection = iConfig.getParameter<edm::InputTag>("input");
+    m_GenJetsCollection = iConfig.getParameter<edm::InputTag>("input_gen");
     m_JetsPayload = iConfig.getParameter<std::string>("payload");
     m_minPt = iConfig.getParameter<double>("minPt");
 
@@ -32,6 +33,7 @@ EventViewBase(iConfig, tree), m_jecUnc(0)
 
     // register consumes
     iC.consumes<pat::JetCollection>(m_JetsCollection);
+    iC.consumes<std::vector<reco::GenJet>>(m_GenJetsCollection);
 }
 
 
@@ -67,9 +69,8 @@ void JetMCSimpleView::fillSpecific(const edm::Event& iEvent, const edm::EventSet
         addToFVec("unc", unc);
     }
 
-    // vector<reco::GenJet> "GenJets"  ""  "SIM"          recoGenJets_ak4GenJets__SIM
-    edm::Handle<std::vector<reco::GenJet> > hGenJets;
-    iEvent.getByLabel(m_JetsCollection, hGenJets);
+    edm::Handle<std::vector<reco::GenJet>> hGenJets;
+    iEvent.getByLabel(m_GenJetsCollection, hGenJets);
 
     for (unsigned int i = 0; i<hGenJets->size(); ++i){
 	pt = hGenJets->at(i).pt();

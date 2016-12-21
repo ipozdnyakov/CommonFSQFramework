@@ -12,6 +12,7 @@ def get(todo):
 	#https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookJetAnalysis
 	#https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookMiniAOD
         input = cms.InputTag("slimmedJets"),	
+        input_gen = cms.InputTag("slimmedGenJets"), #ak4 gen jets	
         payload = cms.string("AK4PFchs"),
         minPt = cms.double(10),
     )

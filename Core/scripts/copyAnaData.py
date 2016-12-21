@@ -14,6 +14,21 @@ import subprocess
 import CommonFSQFramework.Core.Util
 
 
+def getFileListGfalLs(path):
+    ret = []
+    command = ['gfal-ls --timeout 1000', path]
+    proc = subprocess.Popen(command, stdout=subprocess.PIPE)
+    cnt = 0
+    for line in iter(proc.stdout.readline,''):
+        l = line.strip()
+        fname = l.split("/")[-1]
+        if ".root" not in fname: continue
+        srcFile = path + "/" + fname
+        #targetFile = targetDir + "/" + fname
+        ret.append(srcFile)
+
+    return ret
+
 def getFileListLcgLs(path):
     ret = []
     command = ["lcg-ls", path]
@@ -287,7 +302,7 @@ def main():
         if options.usesrmls:
             flist = getFileListSrmLS(sampleList[s]["pathSE"])
         else:
-            flist = getFileListLcgLs(sampleList[s]["pathSE"])
+            flist = getFileListGfalLs(sampleList[s]["pathSE"])
         cnt = 0
         for srcFile in flist:
             fname = srcFile.split("/")[-1]
@@ -313,7 +328,7 @@ def main():
             if "eos/cms" in targetDir:
 	        cpCommand = ['lcg-cp', srcFile, "srm://srm-eoscms.cern.ch/"+targetFile]
 	    else:
-                cpCommand = ['lcg-cp', srcFile, targetFile]
+                cpCommand = ['gfal-copy --timeout 1000', srcFile, targetFile]
             
 	    #cpCommand = ['lcg-ls', srcFile]
 	    #print "would be cpCommand: ", cpCommand
