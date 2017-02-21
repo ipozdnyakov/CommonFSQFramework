@@ -29,7 +29,9 @@ process.source = cms.Source("PoolSource",
 	#setenv TMFSampleName QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8_RunIIFall15MiniAODv2-PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1:
 	#'/store/mc/RunIIFall15MiniAODv2/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/MINIAODSIM/PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1/10000/041D8DFF-E727-E611-AE47-0CC47A4C8EEA.root'
 	#setenv TMFSampleName MinBias_TuneCUETHS1-13TeV-herwigpp_RunIIFall15MiniAODv2-PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1
-	'/store/mc/RunIIFall15MiniAODv2/MinBias_TuneCUETHS1-13TeV-herwigpp/MINIAODSIM/PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1/20000/02790652-B732-E611-826A-0025905C53AA.root'
+	#'/store/mc/RunIIFall15MiniAODv2/MinBias_TuneCUETHS1-13TeV-herwigpp/MINIAODSIM/PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1/20000/02790652-B732-E611-826A-0025905C53AA.root'
+	#setenv TMFSampleName MinBias_TuneCUETHS1-13TeV-herwigpp_RunIIFall15MiniAODv2-noPU_castor_76X_mcRun2_asymptotic_v12-v1
+	'/store/mc/RunIIFall15MiniAODv2/MinBias_TuneCUETHS1-13TeV-herwigpp/MINIAODSIM/noPU_castor_76X_mcRun2_asymptotic_v12-v1/100000/0006DB23-C0E8-E611-A12A-008CFA197DC4.root'
     )
 )
 
