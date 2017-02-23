@@ -22,12 +22,15 @@ setattr(util, "ignore", 1) # for this function only
 ###################################################################################
 
 def DS(ds):
-    return ds
+    split=ds.split(":") 
+    if len(split) == 0: return ds    
+    else: return split[1]
 
 def name(ds):
-    split=ds.split("/") 
+    split1=ds.split(":") 
+    split=split1[1].split("/") 
     if len(split) == 0: return None    
-    if not isData(ds): return split[1]+"_"+split[2]
+    if not isData(ds): return split1[0]
     if isData(ds): return "data_"+split[1]
 
 def isData(ds):
