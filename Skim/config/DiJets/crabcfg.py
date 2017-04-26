@@ -8,7 +8,7 @@ config.section_("General")
 
 config.section_("JobType")
 config.JobType.pluginName = 'Analysis'
-config.JobType.psetName = 'treemaker_DiJets_76.py'
+config.JobType.psetName = 'treemaker_DiJets_80.py'
 #config.JobType.outputFiles = ['trees.root']
 
 config.section_("Data")

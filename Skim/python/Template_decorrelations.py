@@ -2,7 +2,8 @@
 anaType="decorrelations"
 
 #file with list of samples
-dsFile="CommonFSQFramework/Skim/python/ds_mc_herwigpp.txt"
+#dsFile="CommonFSQFramework/Skim/python/ds_mc_herwigpp.txt"
+dsFile="CommonFSQFramework/Skim/python/ds_data_run2016H.txt"
 
 ###################################################################################
 # root path needs proper XXX
@@ -42,6 +43,7 @@ def json(ds):
     realData = isData(ds)
     if realData:
         if "Run2015C" in ds: return "CommonFSQFramework/Skim/lumi/Cert_254986-255031_13TeV_PromptReco_Collisions15_LOWPU_25ns_JSON.txt"
+        if "Run2016H" in ds: return "CommonFSQFramework/Skim/lumi/Cert_271036-284044_13TeV_PromptReco_Collisions16_JSON_LowPU.txt"
     else:
         return ""
 
@@ -57,6 +59,8 @@ def numEvents(ds):
 
 def GT(ds):
     if isData(ds) and "Run2015" in ds: return "76X_dataRun2_16Dec2015_v0"
+    if isData(ds) and "Run2016" in ds and "Prompt" in ds: return "80X_dataRun2_Prompt_v16"
+    if isData(ds) and "Run2016" in ds: return "80X_dataRun2_2016SeptRepro_v7"
     return "76X_mcRun2_asymptotic_RunIIFall15DR76_v1"
     
 def XS(ds):

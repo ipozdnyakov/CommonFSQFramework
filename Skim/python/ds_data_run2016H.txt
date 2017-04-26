@@ -1,0 +1,14 @@
+/FSQJets/Run2016H-03Feb2017_ver2-v1/MINIAOD
+/MinimumBias/Run2016H-PromptReco-v3/MINIAOD
+/L1MinimumBias/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias0/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias1/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias2/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias3/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias4/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias5/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias6/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias7/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias8/Run2016H-PromptReco-v2/MINIAOD
+/L1MinimumBias9/Run2016H-PromptReco-v2/MINIAOD
+/ZeroBias/Run2016H-03Feb2017_ver3-v1/MINIAOD
