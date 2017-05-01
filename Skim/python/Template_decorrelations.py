@@ -2,7 +2,6 @@
 anaType="decorrelations"
 
 #file with list of samples
-#dsFile="CommonFSQFramework/Skim/python/ds_mc_herwigpp.txt"
 dsFile="CommonFSQFramework/Skim/python/ds_data_run2016H.txt"
 
 ###################################################################################
@@ -24,25 +23,27 @@ setattr(util, "ignore", 1) # for this function only
 
 def DS(ds):
     split=ds.split(":") 
-    if len(split) == 0: return ds    
+    if len(split) == 1: return ds    
     else: return split[1]
 
 def name(ds):
     split1=ds.split(":") 
-    split=split1[1].split("/") 
+    if len(split1) > 1:
+        split = split1[1].split("/")
+    else:
+        split = ds.split("/") 
     if len(split) == 0: return None    
     if not isData(ds): return split1[0]
     if isData(ds): return "data_"+split[1]
 
 def isData(ds):
     realData = False
-    if "Run2015C" in ds: realData = True
+    if "Run2016H" in ds: realData = True
     return realData
 
 def json(ds):
     realData = isData(ds)
     if realData:
-        if "Run2015C" in ds: return "CommonFSQFramework/Skim/lumi/Cert_254986-255031_13TeV_PromptReco_Collisions15_LOWPU_25ns_JSON.txt"
         if "Run2016H" in ds: return "CommonFSQFramework/Skim/lumi/Cert_271036-284044_13TeV_PromptReco_Collisions16_JSON_LowPU.txt"
     else:
         return ""
@@ -58,10 +59,8 @@ def numEvents(ds):
     return -1
 
 def GT(ds):
-    if isData(ds) and "Run2015" in ds: return "76X_dataRun2_16Dec2015_v0"
     if isData(ds) and "Run2016" in ds and "Prompt" in ds: return "80X_dataRun2_Prompt_v16"
     if isData(ds) and "Run2016" in ds: return "80X_dataRun2_2016SeptRepro_v7"
-    return "76X_mcRun2_asymptotic_RunIIFall15DR76_v1"
     
 def XS(ds):
     #Note: all cross sections given in pb -- http://iopscience.iop.org/0295-5075/96/2/21002 --- LHCtotal= 73.5 mili b

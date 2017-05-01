@@ -24,14 +24,12 @@ process.options = cms.untracked.PSet(wantSummary = cms.untracked.bool(True))
 # Source
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
-	#setenv TMFSampleName data_FSQJets3:
-	#'/store/data/Run2015C_25ns/FSQJets3/MINIAOD/16Dec2015-v1/50000/002FBD2D-AEAF-E511-BB6D-00261894386F.root'
-	#setenv TMFSampleName QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8_RunIIFall15MiniAODv2-PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1:
-	#'/store/mc/RunIIFall15MiniAODv2/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/MINIAODSIM/PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1/10000/041D8DFF-E727-E611-AE47-0CC47A4C8EEA.root'
-	#setenv TMFSampleName MinBias_TuneCUETHS1-13TeV-herwigpp_RunIIFall15MiniAODv2-PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1
-	#'/store/mc/RunIIFall15MiniAODv2/MinBias_TuneCUETHS1-13TeV-herwigpp/MINIAODSIM/PU25nsData2015v1_castor_76X_mcRun2_asymptotic_v12-v1/20000/02790652-B732-E611-826A-0025905C53AA.root'
-	#setenv TMFSampleName MinBias_13TeV_herwigpp_noPU
-	'/store/mc/RunIIFall15MiniAODv2/MinBias_TuneCUETHS1-13TeV-herwigpp/MINIAODSIM/noPU_castor_76X_mcRun2_asymptotic_v12-v1/100000/0006DB23-C0E8-E611-A12A-008CFA197DC4.root'
+	#setenv TMFSampleName data_FSQJets:
+	'/store/data/Run2016H/FSQJets/MINIAOD/03Feb2017_ver2-v1/110000/0A66D932-80ED-E611-B3B0-0025905B85C0.root'
+	#setenv TMFSampleName data_ZeroBias:
+	#'/store/data/Run2016H/ZeroBias/MINIAOD/03Feb2017_ver3-v1/100000/0A44B237-58EB-E611-AF46-002590E7E07A.root'
+	#setenv TMFSampleName data_L1MinimumBias0:
+	#'/store/data/Run2016H/L1MinimumBias0/MINIAOD/PromptReco-v3/000/284/068/00000/08FD41EC-6C9F-E611-8AA8-02163E012713.root'
     )
 )
 

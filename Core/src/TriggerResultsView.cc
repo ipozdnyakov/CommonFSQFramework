@@ -14,12 +14,10 @@ EventViewBase(iConfig,  tree), hltprovider_(iConfig, iC, *module)
         // check, if it's for L1GT readout
         if (m_triggerNames.at(i).find("L1GT") != std::string::npos) {
             m_triggerClasses[m_triggerNames.at(i)] = std::vector<std::string>();
-
         } else if (iConfig.exists(m_triggerNames.at(i))) {
             std::vector<std::string> triggerClass =  iConfig.getParameter<std::vector<std::string> >(m_triggerNames.at(i));
             m_triggerClasses[m_triggerNames.at(i)] = triggerClass;
             //std::cout << "Trigger created via pset: " << m_triggerNames.at(i) << std::endl; 
-
         } else {
             // TODO: check, that '*' is at the end only
             std::string keyName = m_triggerNames.at(i);
@@ -40,6 +38,7 @@ EventViewBase(iConfig,  tree), hltprovider_(iConfig, iC, *module)
     std::map<std::string, std::vector<std::string> >::const_iterator it, itE;
     it = m_triggerClasses.begin();
     itE = m_triggerClasses.end();
+
     for(;it != itE;++it) {
         if (it->first.find("L1GT") != std::string::npos) {
             registerVecInt(it->first, tree);
@@ -101,6 +100,9 @@ void TriggerResultsView::fillSpecific(const edm::Event& iEvent, const edm::Event
 
     const std::vector< std::string > names = trbn.triggerNames(); 
 
+//    for (unsigned int i=0; i < names.size(); ++i){
+//        cout << names[i] << "\n";
+//    }
 
     if (isStage1_) {
 
@@ -113,7 +115,6 @@ void TriggerResultsView::fillSpecific(const edm::Event& iEvent, const edm::Event
 
       TechnicalTriggerWord TechTrigg = gtReadoutRecord->technicalTriggerWord();
       DecisionWord AlgoTrig          = gtReadoutRecord->decisionWord();
-
 
       std::map<std::string, std::vector<std::string> >::const_iterator it, itE;
       it = m_triggerClasses.begin();
@@ -183,6 +184,8 @@ void TriggerResultsView::fillSpecific(const edm::Event& iEvent, const edm::Event
       std::map<std::string, std::vector<std::string> >::const_iterator it, itE;
       it = m_triggerClasses.begin();
       itE = m_triggerClasses.end();
+
+
       for(;it != itE;++it) {
         //it->first  - branch name
         //it->second - list of triggers to check
@@ -206,17 +209,17 @@ void TriggerResultsView::fillSpecific(const edm::Event& iEvent, const edm::Event
         }
 	
         int accept = 0;
-	
+
         if (m_storePrescales && it->second.size() == 1) {
             std::string name = it->second.at(0);
             if (name.find("*")!= std::string::npos) { // wildcard entry
                 // do nothing
             } else {
-                 //setI("L1PS_" + it->first, (hltprovider_.prescaleValuesInDetail(iEvent, iSetup, name)).first );
-                 setI("HLTPS_" + it->first, (hltprovider_.prescaleValuesInDetail(iEvent, iSetup, name)).second );
+                 //setI("L1PS_" + it->first, (hltprovider_.prescaleValues(iEvent, iSetup, name)).first );
+                 setI("HLTPS_" + it->first, (hltprovider_.prescaleValues(iEvent, iSetup, name)).second );
             }
         }
-	
+
         for (unsigned int i=0; i < it->second.size();++i) {
             std::string name = it->second.at(i);
             if (name.find("*")!= std::string::npos) { // wildcard entry
@@ -232,14 +235,16 @@ void TriggerResultsView::fillSpecific(const edm::Event& iEvent, const edm::Event
             } else { // normal entry
                 if (trbn.accept( it->second.at(i))) accept = 1;
                 if (m_storePrescales) {
-                     //setI("L1PS_" + name, (hltprovider_.prescaleValuesInDetail(iEvent, iSetup, name)).first );
-                     setI("HLTPS_" + name, (hltprovider_.prescaleValuesInDetail(iEvent, iSetup, name)).second );
+                     //setI("L1PS_" + name, (hltprovider_.prescaleValues(iEvent, iSetup, name)).first );
+                     setI("HLTPS_" + name, (hltprovider_.prescaleValues(iEvent, iSetup, name)).second );
                 }
             }
             //std::cout << "Accept: " << it->first <<  " "  << accept << std::endl;
             setI(it->first, accept);
         }
+
       }
+
     }
-    
+
 }
