@@ -25,11 +25,11 @@ process.options = cms.untracked.PSet(wantSummary = cms.untracked.bool(True))
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
 	#setenv TMFSampleName data_FSQJets:
-	'/store/data/Run2016H/FSQJets/MINIAOD/03Feb2017_ver2-v1/110000/0A66D932-80ED-E611-B3B0-0025905B85C0.root'
+	#'/store/data/Run2016H/FSQJets/MINIAOD/03Feb2017_ver2-v1/110000/0A66D932-80ED-E611-B3B0-0025905B85C0.root'
 	#setenv TMFSampleName data_ZeroBias:
 	#'/store/data/Run2016H/ZeroBias/MINIAOD/03Feb2017_ver3-v1/100000/0A44B237-58EB-E611-AF46-002590E7E07A.root'
 	#setenv TMFSampleName data_L1MinimumBias0:
-	#'/store/data/Run2016H/L1MinimumBias0/MINIAOD/PromptReco-v3/000/284/068/00000/08FD41EC-6C9F-E611-8AA8-02163E012713.root'
+	'/store/data/Run2016H/L1MinimumBias0/MINIAOD/PromptReco-v3/000/284/068/00000/08FD41EC-6C9F-E611-8AA8-02163E012713.root'
     )
 )
 

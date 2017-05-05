@@ -51,7 +51,7 @@ EventViewBase(iConfig,  tree), hltprovider_(iConfig, iC, *module)
                     if (name.find("*")!= std::string::npos){ // wildcard entry
                         // do nothing
                     } else {
-                        //registerInt("L1PS_" + it->first, tree);
+                        registerInt("L1PS_" + it->first, tree);
                         registerInt("HLTPS_" + it->first, tree);
                     }
                 } else {
@@ -60,7 +60,7 @@ EventViewBase(iConfig,  tree), hltprovider_(iConfig, iC, *module)
                         if (name.find("*")!= std::string::npos){ // wildcard entry
                             // do not store prescales for wildcard triggers as we can not easily fetch the complete trigger name.
                         } else { // normal entry
-                            //registerInt("L1PS_" + name, tree);
+                            registerInt("L1PS_" + name, tree);
                             registerInt("HLTPS_" + name, tree);
                         }
                     }
@@ -215,7 +215,7 @@ void TriggerResultsView::fillSpecific(const edm::Event& iEvent, const edm::Event
             if (name.find("*")!= std::string::npos) { // wildcard entry
                 // do nothing
             } else {
-                 //setI("L1PS_" + it->first, (hltprovider_.prescaleValues(iEvent, iSetup, name)).first );
+                 setI("L1PS_" + it->first, (hltprovider_.prescaleValues(iEvent, iSetup, name)).first );
                  setI("HLTPS_" + it->first, (hltprovider_.prescaleValues(iEvent, iSetup, name)).second );
             }
         }
@@ -235,7 +235,7 @@ void TriggerResultsView::fillSpecific(const edm::Event& iEvent, const edm::Event
             } else { // normal entry
                 if (trbn.accept( it->second.at(i))) accept = 1;
                 if (m_storePrescales) {
-                     //setI("L1PS_" + name, (hltprovider_.prescaleValues(iEvent, iSetup, name)).first );
+                     setI("L1PS_" + name, (hltprovider_.prescaleValues(iEvent, iSetup, name)).first );
                      setI("HLTPS_" + name, (hltprovider_.prescaleValues(iEvent, iSetup, name)).second );
                 }
             }
