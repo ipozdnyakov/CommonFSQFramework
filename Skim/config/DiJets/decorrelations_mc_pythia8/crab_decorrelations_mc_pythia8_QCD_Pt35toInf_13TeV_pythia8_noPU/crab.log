@@ -1,0 +1,404 @@
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+Customizing to:  QCD_Pt35toInf_13TeV_pythia8_noPU
+
+################################################################################
+Ana version: decorrelations_mc_pythia8
+XS = -1
+isData = False
+################################################################################
+
+Setting globalTag to 76X_mcRun2_asymptotic_RunIIFall15DR76_v1 for sample QCD_Pt35toInf_13TeV_pythia8_noPU
+DEBUG 2017-10-29 13:58:26,263: 	 Executing command: 'submit'
+DEBUG 2017-10-29 13:58:26,264: 	 Found CRAB cache file /afs/cern.ch/user/i/ivanp/.crab3
+DEBUG 2017-10-29 13:58:26,271: 	 Checking credentials
+DEBUG 2017-10-29 13:58:26,272: 	 Found proxy file /tmp/x509up_u59141
+DEBUG 2017-10-29 13:58:26,272: 	 Getting proxy life time left
+DEBUG 2017-10-29 13:58:26,876: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -timeleft
+ output : 43084
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:58:27,585: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -actimeleft
+ output : 43083
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:58:27,585: 	 Proxy valid for 11:58:04 hours
+INFO 2017-10-29 13:58:27,585: 	 Will use CRAB configuration file tmp.py
+DEBUG 2017-10-29 13:58:27,585: 	 Loading CRAB configuration file.
+DEBUG 2017-10-29 13:58:27,590: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2017-10-29 13:58:27,710: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:58:27,711: 	 Checking credentials
+DEBUG 2017-10-29 13:58:27,713: 	 Found proxy file /tmp/x509up_u59141
+DEBUG 2017-10-29 13:58:27,714: 	 Getting proxy life time left
+DEBUG 2017-10-29 13:58:28,740: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -timeleft
+ output : 43082
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:58:29,553: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -actimeleft
+ output : 43081
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:58:29,553: 	 Proxy valid for 11:58:02 hours
+DEBUG 2017-10-29 13:58:30,269: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u59141 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:58:30,694: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-10-29 13:58:30,806: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:58:30,807: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-10-29 13:58:30,807: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov_cmsweb.cern.ch for credential name
+DEBUG 2017-10-29 13:58:31,011: 	 Executing : 
+ command : myproxy-info -l 37686f17ef51dcc353dc381694dced351e67a9b5 -s myproxy.cern.ch
+ output : username: 37686f17ef51dcc353dc381694dced351e67a9b5
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:59:38  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:58:31,012: 	 Myproxy is valid: 2591978
+DEBUG 2017-10-29 13:58:31,012: 	 Command use: submit
+DEBUG 2017-10-29 13:58:31,012: 	 Options use: ['-c', 'tmp.py']
+DEBUG 2017-10-29 13:58:31,424: 	 CRABClient version: 3.3.1707.patch1
+DEBUG 2017-10-29 13:58:31,424: 	 Instance is prod
+DEBUG 2017-10-29 13:58:31,424: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-10-29 13:58:31,424: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-10-29 13:58:31,424: 	 Started submission
+DEBUG 2017-10-29 13:58:31,424: 	 Working on /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+DEBUG 2017-10-29 13:58:31,902: 	 Loading required information from the environment
+DEBUG 2017-10-29 13:58:31,902: 	 Found CMSSW_7_6_3 for slc6_amd64_gcc493 with base /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3
+DEBUG 2017-10-29 13:58:31,902: 	 Loading required information from the environment
+DEBUG 2017-10-29 13:58:31,902: 	 Found CMSSW_7_6_3 for slc6_amd64_gcc493 with base /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3
+DEBUG 2017-10-29 13:58:31,920: 	 UNIQUE NAME: tarUUID dd1d7970-4df5-4a54-8437-7cb52942012a 
+DEBUG 2017-10-29 13:58:31,920: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('User')
+config.section_('General')
+config.General.workArea = 'decorrelations_mc_pythia8'
+config.General.requestName = 'decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU'
+config.section_('JobType')
+config.JobType.psetName = 'treemaker_DiJets_76.py'
+config.JobType.pluginName = 'Analysis'
+config.section_('Data')
+config.Data.inputDataset = '/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/RunIIFall15MiniAODv2-noPU_castor_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM'
+config.Data.unitsPerJob = 100000
+config.Data.outputDatasetTag = 'decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU'
+config.Data.splitting = 'EventAwareLumiBased'
+config.section_('Site')
+config.Site.storageSite = 'T2_RU_ITEP'
+
+DEBUG 2017-10-29 13:58:31,921: 	 self.config.JobType.psetName: treemaker_DiJets_76.py
+INFO 2017-10-29 13:58:31,921: 	 Importing CMSSW configuration treemaker_DiJets_76.py
+INFO 2017-10-29 13:58:32,153: 	 Finished importing CMSSW configuration treemaker_DiJets_76.py
+DEBUG 2017-10-29 13:58:32,153: 	 Writing CMSSW configuration to /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/inputs/PSet.py
+DEBUG 2017-10-29 13:58:32,209: 	 The following EDM output files will be collected: []
+DEBUG 2017-10-29 13:58:32,209: 	 The following TFile output files will be collected: ['trees.root']
+DEBUG 2017-10-29 13:58:32,209: 	 The following user output files will be collected: []
+DEBUG 2017-10-29 13:58:32,209: 	 Loading required information from the environment
+DEBUG 2017-10-29 13:58:32,209: 	 Found CMSSW_7_6_3 for slc6_amd64_gcc493 with base /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3
+DEBUG 2017-10-29 13:58:32,209: 	 Making tarball in /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/inputs/dd1d7970-4df5-4a54-8437-7cb52942012adefault.tgz
+DEBUG 2017-10-29 13:58:32,214: 	 Checking directory /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/lib
+DEBUG 2017-10-29 13:58:32,214: 	 Adding directory /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/lib to tarball
+DEBUG 2017-10-29 13:58:32,515: 	 Checking directory /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/biglib
+DEBUG 2017-10-29 13:58:32,515: 	 Adding directory /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/biglib to tarball
+DEBUG 2017-10-29 13:58:32,516: 	 Checking directory /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/module
+DEBUG 2017-10-29 13:58:32,526: 	 Adding data directory /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Core/interface to tarball
+DEBUG 2017-10-29 13:58:32,542: 	 Adding data directory /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Core/test/MNxsectionAna/data to tarball
+DEBUG 2017-10-29 13:58:32,566: 	 Uploading archive /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/inputs/dd1d7970-4df5-4a54-8437-7cb52942012adefault.tgz (491 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2017-10-29 13:58:33,123: 	 Loading required information from the environment
+DEBUG 2017-10-29 13:58:33,124: 	 Found CMSSW_7_6_3 for slc6_amd64_gcc493 with base /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3
+DEBUG 2017-10-29 13:58:33,124: 	 Making tarball in /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/inputs/debugFiles.tgz
+DEBUG 2017-10-29 13:58:33,128: 	 Uploading archive /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/inputs/debugFiles.tgz (1 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2017-10-29 13:58:33,533: 	 Result uploading input files: 494025cbbb7700767bd9119bec23cfde317bcf1f57d2b3692d030c5903883a00.tar.gz 
+WARNING 2017-10-29 13:58:33,533: 	 Warning: The following output files will not be published, as they are not EDM files: ['trees.root']
+INFO 2017-10-29 13:58:33,533: 	 Sending the request to the server
+DEBUG 2017-10-29 13:58:33,533: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_RU_ITEP', 'algoargs': 100000, 'cachefilename': '494025cbbb7700767bd9119bec23cfde317bcf1f57d2b3692d030c5903883a00.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_7_6_3', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/RunIIFall15MiniAODv2-noPU_castor_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM', 'dryrun': 0, 'workflow': 'crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': ['trees.root'], 'oneEventMode': 0, 'debugfilename': '645f65774952bc0c3b61ad8323575deb69f9705f7eef902e777c7253fe5783a3.tar.gz', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc6_amd64_gcc493', 'totalunits': 0, 'splitalgo': 'EventAwareLumiBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': 'decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU'} 
+DEBUG 2017-10-29 13:58:33,534: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_RU_ITEP&algoargs=100000&cachefilename=494025cbbb7700767bd9119bec23cfde317bcf1f57d2b3692d030c5903883a00.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_7_6_3&primarydataset=&inputdata=%2FQCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8%2FRunIIFall15MiniAODv2-noPU_castor_76X_mcRun2_asymptotic_v12-v1%2FMINIAODSIM&dryrun=0&workflow=crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=645f65774952bc0c3b61ad8323575deb69f9705f7eef902e777c7253fe5783a3.tar.gz&saveoutput=1&publication=1&jobarch=slc6_amd64_gcc493&totalunits=0&splitalgo=EventAwareLumiBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU&tfileoutfiles=trees.root
+DEBUG 2017-10-29 13:58:34,248: 	 Result: {u'result': [{u'RequestName': u'171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU'}]}
+INFO 2017-10-29 13:58:34,251: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2017-10-29 13:58:34,251: 	 Task name: 171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+INFO 2017-10-29 13:58:34,251: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2017-10-29 13:58:34,251: 	 About to return
+INFO 2017-10-29 13:58:34,253: 	 Log file is /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/crab.log
+DEBUG 2017-10-29 18:12:45,690: 	 Executing command: 'getoutput'
+DEBUG 2017-10-29 18:12:45,690: 	 Found CRAB cache file /afs/cern.ch/user/i/ivanp/.crab3
+DEBUG 2017-10-29 18:12:45,698: 	 Checking credentials
+DEBUG 2017-10-29 18:12:45,698: 	 Found proxy file /tmp/x509up_u59141
+DEBUG 2017-10-29 18:12:45,698: 	 Getting proxy life time left
+DEBUG 2017-10-29 18:12:47,113: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -timeleft
+ output : 27823
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:47,821: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -actimeleft
+ output : 27823
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:47,822: 	 Proxy valid for 07:43:43 hours
+DEBUG 2017-10-29 18:12:47,826: 	 Using VO group '' and VO role 'NULL' as written in the request cache file for this task.
+DEBUG 2017-10-29 18:12:47,937: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:47,937: 	 Checking credentials
+DEBUG 2017-10-29 18:12:47,937: 	 Found proxy file /tmp/x509up_u59141
+DEBUG 2017-10-29 18:12:47,937: 	 Getting proxy life time left
+DEBUG 2017-10-29 18:12:48,444: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -timeleft
+ output : 27822
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:49,052: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -actimeleft
+ output : 27822
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:49,052: 	 Proxy valid for 07:43:42 hours
+DEBUG 2017-10-29 18:12:49,665: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u59141 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:50,052: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-10-29 18:12:50,163: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:50,164: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-10-29 18:12:50,164: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov_cmsweb.cern.ch for credential name
+DEBUG 2017-10-29 18:12:50,468: 	 Executing : 
+ command : myproxy-info -l 37686f17ef51dcc353dc381694dced351e67a9b5 -s myproxy.cern.ch
+ output : username: 37686f17ef51dcc353dc381694dced351e67a9b5
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 715:45:18  (29.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:50,469: 	 Myproxy is valid: 2576718
+DEBUG 2017-10-29 18:12:50,469: 	 Command use: getoutput
+DEBUG 2017-10-29 18:12:50,469: 	 Options use: ['decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/']
+DEBUG 2017-10-29 18:12:51,001: 	 CRABClient version: 3.3.1707.patch1
+DEBUG 2017-10-29 18:12:51,002: 	 Instance is prod
+DEBUG 2017-10-29 18:12:51,002: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-10-29 18:12:51,002: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-10-29 18:12:51,002: 	 Executing command: 'status'
+DEBUG 2017-10-29 18:12:51,002: 	 Found CRAB cache file /afs/cern.ch/user/i/ivanp/.crab3
+DEBUG 2017-10-29 18:12:51,010: 	 Checking credentials
+DEBUG 2017-10-29 18:12:51,010: 	 Found proxy file /tmp/x509up_u59141
+DEBUG 2017-10-29 18:12:51,010: 	 Getting proxy life time left
+DEBUG 2017-10-29 18:12:51,618: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -timeleft
+ output : 27819
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:52,230: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -actimeleft
+ output : 27818
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:52,230: 	 Proxy valid for 07:43:39 hours
+DEBUG 2017-10-29 18:12:52,413: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:52,413: 	 Checking credentials
+DEBUG 2017-10-29 18:12:52,414: 	 Found proxy file /tmp/x509up_u59141
+DEBUG 2017-10-29 18:12:52,414: 	 Getting proxy life time left
+DEBUG 2017-10-29 18:12:52,919: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -timeleft
+ output : 27818
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:53,536: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -actimeleft
+ output : 27817
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:53,536: 	 Proxy valid for 07:43:38 hours
+DEBUG 2017-10-29 18:12:53,918: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2017-10-29 18:12:54,027: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:54,028: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2017-10-29 18:12:54,028: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov_cmsweb.cern.ch for credential name
+DEBUG 2017-10-29 18:12:54,233: 	 Executing : 
+ command : myproxy-info -l 37686f17ef51dcc353dc381694dced351e67a9b5 -s myproxy.cern.ch
+ output : username: 37686f17ef51dcc353dc381694dced351e67a9b5
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 715:45:14  (29.8 days)
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 18:12:54,233: 	 Myproxy is valid: 2576714
+DEBUG 2017-10-29 18:12:54,233: 	 Command use: status
+DEBUG 2017-10-29 18:12:54,233: 	 Options use: []
+DEBUG 2017-10-29 18:12:54,681: 	 CRABClient version: 3.3.1707.patch1
+DEBUG 2017-10-29 18:12:54,681: 	 Instance is prod
+DEBUG 2017-10-29 18:12:54,681: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-10-29 18:12:54,681: 	 Command url /crabserver/prod/workflow
+DEBUG 2017-10-29 18:12:55,123: 	 Got information from server oracle database: {u'result': [u'171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU', u'None', u'SUBMITTED', u'2017-10-29 12:58:34.233323', u'None', u'2017-10-29 12:59:15.435696', u'None', u'CMSSW_7_6_3', u'slc6_amd64_gcc493', u'/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/RunIIFall15MiniAODv2-noPU_castor_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM', u'[]', u'[]', u'EventAwareLumiBased', u"{'splitOnRun': False, 'events_per_job': 100000, 'halt_job_on_file_boundaries': False, 'runs': [], 'lumis': []}", u'0', u'494025cbbb7700767bd9119bec23cfde317bcf1f57d2b3692d030c5903883a00.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ivanp', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov', u'cms', u'None', u'None', u'decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU-00000000000000000000000000000000', u'T2_RU_ITEP', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'Analysis', u'{}', u'[]', u'F', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'http://vocms0120.cern.ch/mon/cms1402/171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU', u'None', u'None', u'[]', u'[]', u'[]', u'pythia', u'[]', u"['trees.root']", u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'None', u'0', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0120.cern.ch', u'F', u'[]', u'T', u'/store/user/ivanp/', u'F', u'None', u'F', u'F', u'F', u'None', u'QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8', u'filetransfers', u'SUBMIT', u'12781560', u'645f65774952bc0c3b61ad8323575deb69f9705f7eef902e777c7253fe5783a3.tar.gz', u'188.184.91.197', u'F', u'None'], u'desc': {u'columns': [u'tm_taskname', u'panda_jobset_id', u'tm_task_status', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_job_type', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_user_webdir', u'tm_activity', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_task_warnings', u'tm_generator', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_asourl', u'tm_events_per_lumi', u'tm_use_parent', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_publish_groupname', u'tm_nonvalid_input_dataset', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_asodb', u'tm_task_command', u'clusterid', u'tm_debug_files', u'tm_submitter_ip_addr', u'tm_ignore_global_blacklist', u'tm_last_publication']}}
+INFO 2017-10-29 18:12:55,124: 	 CRAB project directory:		/afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+INFO 2017-10-29 18:12:55,124: 	 Task name:			171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+INFO 2017-10-29 18:12:55,124: 	 Grid scheduler:			crab3@vocms0120.cern.ch
+INFO 2017-10-29 18:12:55,124: 	 Status on the CRAB server:	SUBMITTED
+INFO 2017-10-29 18:12:55,124: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/171029_125833%3Aivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+INFO 2017-10-29 18:12:55,124: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=ivanp&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=171029_125833%3Aivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+DEBUG 2017-10-29 18:12:55,124: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 12781560)
+DEBUG 2017-10-29 18:12:55,124: 	 Webdir is located at http://vocms0120.cern.ch/mon/cms1402/171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+DEBUG 2017-10-29 18:12:55,513: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0120/cms1402/171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+DEBUG 2017-10-29 18:12:55,513: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0120/cms1402/171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/status_cache
+DEBUG 2017-10-29 18:12:55,877: 	 Got information from status cache file: {'10': {'Retries': 0, 'WallDurations': [9.0, 270.0], 'StartTimes': [1509282174.0], 'SubmitTimes': [1509281967.0], 'JobIds': ['12781567.0'], 'EndTimes': [1509282444.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [7028], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_IT_Bari'], 'TotalSysCpuTimeHistory': [8]}, '1': {'Retries': 0, 'WallDurations': [149.0, 221.40438103675842], 'StartTimes': [1509282404.0], 'SubmitTimes': [1509281967.0], 'JobIds': ['12781570.0'], 'EndTimes': [1509282553.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [33148], 'TotalUserCpuTimeHistory': [96], 'SiteHistory': ['Unknown', 'T2_IT_Bari'], 'TotalSysCpuTimeHistory': [7]}, '3': {'Retries': 0, 'WallDurations': [9.0, 264.0], 'StartTimes': [1509282174.0], 'SubmitTimes': [1509281967.0], 'JobIds': ['12781566.0'], 'EndTimes': [1509282438.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [2664], 'TotalUserCpuTimeHistory': [114], 'SiteHistory': ['Unknown', 'T2_IT_Bari'], 'TotalSysCpuTimeHistory': [9]}, '2': {'Retries': 0, 'WallDurations': [176.0, 216.40438103675842], 'StartTimes': [1509282409.0], 'SubmitTimes': [1509281967.0], 'JobIds': ['12781571.0'], 'EndTimes': [1509282585.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [44652], 'TotalUserCpuTimeHistory': [122], 'SiteHistory': ['Unknown', 'T2_IT_Bari'], 'TotalSysCpuTimeHistory': [9]}, '5': {'Retries': 0, 'WallDurations': [9.0, 232.0], 'StartTimes': [1509282174.0], 'SubmitTimes': [1509281967.0], 'JobIds': ['12781565.0'], 'EndTimes': [1509282406.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [2704], 'TotalUserCpuTimeHistory': [102], 'SiteHistory': ['Unknown', 'T2_IT_Bari'], 'TotalSysCpuTimeHistory': [8]}, '4': {'Retries': 0, 'WallDurations': [10.0, 404.0], 'StartTimes': [1509282404.0], 'SubmitTimes': [1509281967.0], 'JobIds': ['12781568.0'], 'EndTimes': [1509282808.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [398156], 'TotalUserCpuTimeHistory': [109], 'SiteHistory': ['Unknown', 'T2_IT_Rome'], 'TotalSysCpuTimeHistory': [10]}, '7': {'Retries': 0, 'WallDurations': [189.0, 222.40438103675842], 'StartTimes': [1509282403.0], 'SubmitTimes': [1509281968.0], 'JobIds': ['12781573.0'], 'EndTimes': [1509282592.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [2600], 'TotalUserCpuTimeHistory': [120], 'SiteHistory': ['Unknown', 'T2_IT_Bari'], 'TotalSysCpuTimeHistory': [9]}, '6': {'Retries': 0, 'WallDurations': [9.0, 270.0], 'StartTimes': [1509282174.0], 'SubmitTimes': [1509281967.0], 'JobIds': ['12781569.0'], 'EndTimes': [1509282444.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [2600], 'TotalUserCpuTimeHistory': [138], 'SiteHistory': ['Unknown', 'T2_IT_Bari'], 'TotalSysCpuTimeHistory': [9]}, '9': {'Retries': 0, 'WallDurations': [202.0, 223.40438103675842], 'StartTimes': [1509282402.0], 'SubmitTimes': [1509281968.0], 'JobIds': ['12781572.0'], 'EndTimes': [1509282604.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [23752], 'TotalUserCpuTimeHistory': [114], 'SiteHistory': ['Unknown', 'T2_IT_Bari'], 'TotalSysCpuTimeHistory': [21]}, '8': {'Retries': 0, 'WallDurations': [9.0, 284.0], 'StartTimes': [1509282404.0], 'SubmitTimes': [1509281968.0], 'JobIds': ['12781574.0'], 'EndTimes': [1509282688.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [2696], 'TotalUserCpuTimeHistory': [101], 'SiteHistory': ['Unknown', 'T2_IT_Rome'], 'TotalSysCpuTimeHistory': [8]}}
+INFO 2017-10-29 18:12:55,877: 	 Status on the scheduler:	COMPLETED
+INFO 2017-10-29 18:12:55,877: 	 
+Jobs status:                    finished      100.0% (10/10)
+INFO 2017-10-29 18:12:56,281: 	 
+No publication information available yet
+DEBUG 2017-10-29 18:12:56,773: 	 Server result: {u'result': [u'171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU', u'None', u'SUBMITTED', u'2017-10-29 12:58:34.233323', u'None', u'2017-10-29 12:59:15.435696', u'None', u'CMSSW_7_6_3', u'slc6_amd64_gcc493', u'/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/RunIIFall15MiniAODv2-noPU_castor_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM', u'[]', u'[]', u'EventAwareLumiBased', u"{'splitOnRun': False, 'events_per_job': 100000, 'halt_job_on_file_boundaries': False, 'runs': [], 'lumis': []}", u'0', u'494025cbbb7700767bd9119bec23cfde317bcf1f57d2b3692d030c5903883a00.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ivanp', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ivanp/CN=716272/CN=Ivan Pozdnyakov', u'cms', u'None', u'None', u'decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU-00000000000000000000000000000000', u'T2_RU_ITEP', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'Analysis', u'{}', u'[]', u'F', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'http://vocms0120.cern.ch/mon/cms1402/171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU', u'None', u'None', u'[]', u'[]', u'[]', u'pythia', u'[]', u"['trees.root']", u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'None', u'0', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0120.cern.ch', u'F', u'[]', u'T', u'/store/user/ivanp/', u'F', u'None', u'F', u'F', u'F', u'None', u'QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8', u'filetransfers', u'SUBMIT', u'12781560', u'645f65774952bc0c3b61ad8323575deb69f9705f7eef902e777c7253fe5783a3.tar.gz', u'188.184.91.197', u'F', u'None'], u'desc': {u'columns': [u'tm_taskname', u'panda_jobset_id', u'tm_task_status', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_job_type', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_user_webdir', u'tm_activity', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_task_warnings', u'tm_generator', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_asourl', u'tm_events_per_lumi', u'tm_use_parent', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_publish_groupname', u'tm_nonvalid_input_dataset', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_asodb', u'tm_task_command', u'clusterid', u'tm_debug_files', u'tm_submitter_ip_addr', u'tm_ignore_global_blacklist', u'tm_last_publication']}}
+DEBUG 2017-10-29 18:12:56,773: 	 Retrieving locations for task 171029_125833:ivanp_crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU
+DEBUG 2017-10-29 18:12:56,773: 	 Retrieving all file locations
+DEBUG 2017-10-29 18:12:56,773: 	 Retrieving jobs [('jobids', '10'), ('jobids', '1'), ('jobids', '3'), ('jobids', '2'), ('jobids', '5'), ('jobids', '4'), ('jobids', '7'), ('jobids', '6'), ('jobids', '9'), ('jobids', '8')]
+DEBUG 2017-10-29 18:12:57,212: 	 Server result: {u'result': [{u'tmpsite': u'T2_IT_Rome', u'checksum': {u'adler32': u'b8080929', u'cksum': 3776341127, u'md5': u'b8080929'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_4.root', u'site': u'T2_RU_ITEP', u'jobid': u'4', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_4.root', u'size': 19372610, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Rome', u'checksum': {u'adler32': u'91c425e4', u'cksum': 2228010419, u'md5': u'91c425e4'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_8.root', u'site': u'T2_RU_ITEP', u'jobid': u'8', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_8.root', u'size': 19205365, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'87477f09', u'cksum': 982679726, u'md5': u'87477f09'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_9.root', u'site': u'T2_RU_ITEP', u'jobid': u'9', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_9.root', u'size': 19164127, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'826d480', u'cksum': 490706443, u'md5': u'826d480'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_7.root', u'site': u'T2_RU_ITEP', u'jobid': u'7', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_7.root', u'size': 19275076, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'd04fdb04', u'cksum': 2680484315, u'md5': u'd04fdb04'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_2.root', u'site': u'T2_RU_ITEP', u'jobid': u'2', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_2.root', u'size': 19206992, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'd92305ba', u'cksum': 2605453836, u'md5': u'd92305ba'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_1.root', u'site': u'T2_RU_ITEP', u'jobid': u'1', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_1.root', u'size': 19296771, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'b1cabc2f', u'cksum': 2783885445, u'md5': u'b1cabc2f'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_6.root', u'site': u'T2_RU_ITEP', u'jobid': u'6', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_6.root', u'size': 19209277, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'c5ae6a04', u'cksum': 4029363621, u'md5': u'c5ae6a04'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_10.root', u'site': u'T2_RU_ITEP', u'jobid': u'10', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_10.root', u'size': 18314722, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'31187404', u'cksum': 1735436923, u'md5': u'31187404'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_3.root', u'site': u'T2_RU_ITEP', u'jobid': u'3', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_3.root', u'size': 19147794, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'51e2bba4', u'cksum': 3458439067, u'md5': u'51e2bba4'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_5.root', u'site': u'T2_RU_ITEP', u'jobid': u'5', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_5.root', u'size': 19212488, u'directstageout': u'F'}]}
+DEBUG 2017-10-29 18:12:57,213: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u59141', 'maxcachereuse': 24.0, 'cachepath': '/tmp/ivanp/.wmcore_cache_EOPCQE/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u59141', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'content_type': 'application/x-www-form-urlencoded', 'cacheduration': 0, 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'accept_type': 'text/html', 'key': '/tmp/x509up_u59141', 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory object at 0x27a99d0>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'pycurl': True, 'cachepath': '/tmp/ivanp/.wmcore_cache_EOPCQE/cmsweb.cern.ch', 'cert': '/tmp/x509up_u59141', 'timeout': 300, 'req_cache_path': '/tmp/ivanp/.wmcore_cache_EOPCQE/cmsweb.cern.ch/.cache', 'logger': <logging.Logger object at 0x27999d0>}, 'logger': <logging.Logger object at 0x27999d0>, 'cacheduration': 0, 'method': None, 'pycurl': True}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/ivanp/.wmcore_cache_EOPCQE/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+DEBUG 2017-10-29 18:12:57,214: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_4.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:12:57,611: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_8.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:12:58,049: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_9.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:12:58,427: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_7.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:12:58,797: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_2.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:12:59,240: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_1.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:12:59,595: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_6.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:12:59,953: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_10.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:13:00,318: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_3.root', 'protocol': 'srmv2'}
+DEBUG 2017-10-29 18:13:00,700: 	 getData: 
+	url: lfn2pfn
+	data: {'node': u'T2_RU_ITEP', 'custodial': 'n', 'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_5.root', 'protocol': 'srmv2'}
+INFO 2017-10-29 18:13:01,117: 	 Setting the destination to /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results 
+INFO 2017-10-29 18:13:01,117: 	 Retrieving 10 files
+DEBUG 2017-10-29 18:13:01,117: 	 Executing command: 'remote_copy'
+DEBUG 2017-10-29 18:13:01,117: 	 Found CRAB cache file /afs/cern.ch/user/i/ivanp/.crab3
+DEBUG 2017-10-29 18:13:01,121: 	 Skipping proxy creation
+DEBUG 2017-10-29 18:13:01,121: 	 Command use: remote_copy
+DEBUG 2017-10-29 18:13:01,121: 	 Options use: ['--destination', '/afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results', '--input', [{u'tmpsite': u'T2_IT_Rome', u'checksum': {u'adler32': u'b8080929', u'cksum': 3776341127, u'md5': u'b8080929'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_4.root', u'site': u'T2_RU_ITEP', u'jobid': u'4', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_4.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_4.root', u'size': 19372610, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Rome', u'checksum': {u'adler32': u'91c425e4', u'cksum': 2228010419, u'md5': u'91c425e4'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_8.root', u'site': u'T2_RU_ITEP', u'jobid': u'8', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_8.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_8.root', u'size': 19205365, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'87477f09', u'cksum': 982679726, u'md5': u'87477f09'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_9.root', u'site': u'T2_RU_ITEP', u'jobid': u'9', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_9.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_9.root', u'size': 19164127, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'826d480', u'cksum': 490706443, u'md5': u'826d480'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_7.root', u'site': u'T2_RU_ITEP', u'jobid': u'7', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_7.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_7.root', u'size': 19275076, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'd04fdb04', u'cksum': 2680484315, u'md5': u'd04fdb04'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_2.root', u'site': u'T2_RU_ITEP', u'jobid': u'2', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_2.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_2.root', u'size': 19206992, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'd92305ba', u'cksum': 2605453836, u'md5': u'd92305ba'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_1.root', u'site': u'T2_RU_ITEP', u'jobid': u'1', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_1.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_1.root', u'size': 19296771, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'b1cabc2f', u'cksum': 2783885445, u'md5': u'b1cabc2f'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_6.root', u'site': u'T2_RU_ITEP', u'jobid': u'6', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_6.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_6.root', u'size': 19209277, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'c5ae6a04', u'cksum': 4029363621, u'md5': u'c5ae6a04'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_10.root', u'site': u'T2_RU_ITEP', u'jobid': u'10', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_10.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_10.root', u'size': 18314722, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'31187404', u'cksum': 1735436923, u'md5': u'31187404'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_3.root', u'site': u'T2_RU_ITEP', u'jobid': u'3', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_3.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_3.root', u'size': 19147794, u'directstageout': u'F'}, {u'tmpsite': u'T2_IT_Bari', u'checksum': {u'adler32': u'51e2bba4', u'cksum': 3458439067, u'md5': u'51e2bba4'}, u'lfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_5.root', u'site': u'T2_RU_ITEP', u'jobid': u'5', 'pfn': u'srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_5.root', u'tmplfn': u'/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_5.root', u'size': 19212488, u'directstageout': u'F'}], '--dir', 'decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/', '--proxy', '/tmp/x509up_u59141', '--parallel', None, '--wait', None, '--checksum', 'ADLER32', '--command', None]
+DEBUG 2017-10-29 18:13:01,543: 	 CRABClient version: 3.3.1707.patch1
+DEBUG 2017-10-29 18:13:01,543: 	 Instance is prod
+DEBUG 2017-10-29 18:13:01,543: 	 Server base url is cmsweb.cern.ch
+DEBUG 2017-10-29 18:13:01,543: 	 Command url /crabserver/prod/workflow
+INFO 2017-10-29 18:13:01,548: 	 Will use `gfal-copy` command for file transfers
+DEBUG 2017-10-29 18:13:01,634: 	 Starting ChildProcess with 10 ChildProcess
+INFO 2017-10-29 18:13:01,671: 	 Placing file 'trees_4.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,687: 	 Placing file 'trees_8.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,698: 	 Placing file 'trees_9.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,706: 	 Placing file 'trees_7.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,718: 	 Placing file 'trees_2.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,726: 	 Placing file 'trees_1.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,735: 	 Placing file 'trees_6.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,758: 	 Placing file 'trees_10.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,771: 	 Placing file 'trees_3.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,818: 	 Placing file 'trees_5.root' in retrieval queue 
+INFO 2017-10-29 18:13:01,819: 	 Please wait
+DEBUG 2017-10-29 18:13:01,819: 	 stopchildproc() method has been called
+DEBUG 2017-10-29 18:13:31,917: 	 The output of the transfer subprocesses follows:
+DEBUG 2017-10-29 18:13:31,918: 	 	INFO 2017-10-29 18:13:01,681: 	 Retrieving trees_4.root 
+DEBUG 2017-10-29 18:13:31,918: 	 	DEBUG 2017-10-29 18:13:01,682: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 152  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_4.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_4.root
+DEBUG 2017-10-29 18:13:31,918: 	 	INFO 2017-10-29 18:13:01,694: 	 Retrieving trees_8.root 
+DEBUG 2017-10-29 18:13:31,918: 	 	DEBUG 2017-10-29 18:13:01,695: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 151  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_8.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_8.root
+DEBUG 2017-10-29 18:13:31,919: 	 	INFO 2017-10-29 18:13:01,717: 	 Retrieving trees_9.root 
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:01,718: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 150  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_9.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_9.root
+DEBUG 2017-10-29 18:13:31,919: 	 	INFO 2017-10-29 18:13:01,732: 	 Retrieving trees_7.root 
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:01,733: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 151  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_7.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_7.root
+DEBUG 2017-10-29 18:13:31,919: 	 	INFO 2017-10-29 18:13:01,738: 	 Retrieving trees_2.root 
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:01,738: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 151  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_2.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_2.root
+DEBUG 2017-10-29 18:13:31,919: 	 	INFO 2017-10-29 18:13:01,742: 	 Retrieving trees_1.root 
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:01,743: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 151  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_1.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_1.root
+DEBUG 2017-10-29 18:13:31,919: 	 	INFO 2017-10-29 18:13:01,749: 	 Retrieving trees_6.root 
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:01,749: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 151  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_6.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_6.root
+DEBUG 2017-10-29 18:13:31,919: 	 	INFO 2017-10-29 18:13:01,763: 	 Retrieving trees_10.root 
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:01,764: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 144  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_10.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_10.root
+DEBUG 2017-10-29 18:13:31,919: 	 	INFO 2017-10-29 18:13:01,774: 	 Retrieving trees_3.root 
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:01,775: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 150  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_3.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_3.root
+DEBUG 2017-10-29 18:13:31,919: 	 	INFO 2017-10-29 18:13:01,820: 	 Retrieving trees_5.root 
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:01,820: 	 Executing env -i X509_USER_PROXY=/tmp/x509up_u59141 gfal-copy -v -K ADLER32  -T 1800  -t 151  srm://se3.itep.ru:8443/srm/managerv2?SFN=/pnfs/itep.ru/data/cms/store/user/ivanp/QCD_Pt-35toInf_TuneCUETP8M1_13TeV-pythia8/decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/171029_125833/0000/trees_5.root file:///afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/results/trees_5.root
+DEBUG 2017-10-29 18:13:31,919: 	 	DEBUG 2017-10-29 18:13:19,436: 	 Finish executing for file trees_1.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:19,437: 	 Success: Success in retrieving trees_1.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:24,438: 	 Finish executing for file trees_2.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:24,439: 	 Success: Success in retrieving trees_2.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:24,512: 	 Finish executing for file trees_3.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:24,513: 	 Success: Success in retrieving trees_3.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:25,985: 	 Finish executing for file trees_10.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:25,986: 	 Success: Success in retrieving trees_10.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:26,390: 	 Finish executing for file trees_9.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:26,392: 	 Success: Success in retrieving trees_9.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:26,692: 	 Finish executing for file trees_5.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:26,692: 	 Success: Success in retrieving trees_5.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:26,759: 	 Finish executing for file trees_8.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:26,760: 	 Success: Success in retrieving trees_8.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:27,109: 	 Finish executing for file trees_6.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:27,110: 	 Success: Success in retrieving trees_6.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:27,176: 	 Finish executing for file trees_7.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:27,177: 	 Success: Success in retrieving trees_7.root 
+DEBUG 2017-10-29 18:13:31,920: 	 	DEBUG 2017-10-29 18:13:31,908: 	 Finish executing for file trees_4.root
+DEBUG 2017-10-29 18:13:31,920: 	 	INFO 2017-10-29 18:13:31,909: 	 Success: Success in retrieving trees_4.root 
+INFO 2017-10-29 18:13:32,051: 	 Success: All files successfully retrieved
+INFO 2017-10-29 18:13:32,070: 	 Log file is /afs/cern.ch/work/i/ivanp/CFF_SOFT/CMSSW_7_6_3/src/CommonFSQFramework/Skim/config/DiJets/decorrelations_mc_pythia8/crab_decorrelations_mc_pythia8_QCD_Pt35toInf_13TeV_pythia8_noPU/crab.log

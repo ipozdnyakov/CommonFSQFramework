@@ -1,0 +1,84 @@
+DEBUG 2017-10-29 13:53:33,327: 	 Executing command: 'submit'
+DEBUG 2017-10-29 13:53:33,327: 	 Found CRAB cache file /afs/cern.ch/user/i/ivanp/.crab3
+DEBUG 2017-10-29 13:53:33,354: 	 Checking credentials
+DEBUG 2017-10-29 13:53:33,354: 	 Found proxy file /tmp/x509up_u59141
+DEBUG 2017-10-29 13:53:33,354: 	 Getting proxy life time left
+DEBUG 2017-10-29 13:53:33,958: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -timeleft
+ output : 40063
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:53:34,468: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -actimeleft
+ output : 40062
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:53:34,469: 	 Proxy valid for 11:07:43 hours
+INFO 2017-10-29 13:53:34,469: 	 Will use CRAB configuration file tmp.py
+DEBUG 2017-10-29 13:53:34,469: 	 Loading CRAB configuration file.
+ERROR 2017-10-29 13:53:34,473: 	 Error while loading CRAB configuration:
+name 'config' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2017-10-29 13:53:34,473: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+name 'config' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2017-10-29 13:56:45,326: 	 Executing command: 'submit'
+DEBUG 2017-10-29 13:56:45,326: 	 Found CRAB cache file /afs/cern.ch/user/i/ivanp/.crab3
+DEBUG 2017-10-29 13:56:45,335: 	 Checking credentials
+DEBUG 2017-10-29 13:56:45,335: 	 Found proxy file /tmp/x509up_u59141
+DEBUG 2017-10-29 13:56:45,335: 	 Getting proxy life time left
+DEBUG 2017-10-29 13:56:46,046: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -timeleft
+ output : 43185
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:56:46,659: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u59141 -actimeleft
+ output : 43184
+
+ error: 
+ retcode : 0
+DEBUG 2017-10-29 13:56:46,660: 	 Proxy valid for 11:59:45 hours
+INFO 2017-10-29 13:56:46,660: 	 Will use CRAB configuration file tmp.py
+DEBUG 2017-10-29 13:56:46,660: 	 Loading CRAB configuration file.
+ERROR 2017-10-29 13:56:46,666: 	 Error while loading CRAB configuration:
+name 'config' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2017-10-29 13:56:46,667: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/bin/crab", line 160, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/bin/crab", line 146, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/submit.py", line 34, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args=True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 298, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc493/cms/crabclient/3.3.1707.patch1/lib/python2.7/site-packages/CRABClient/Commands/SubCommand.py", line 84, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Error while loading CRAB configuration:
+name 'config' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Syntax_error_in_CRAB_configurati
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile

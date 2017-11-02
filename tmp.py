@@ -1,0 +1,12 @@
+config.General.workArea='decorrelations_mc_pythia8'
+config.General.requestName='decorrelations_mc_pythia8_MinBias_13TeV_pythia8_noPU'
+config.Data.outputDatasetTag='decorrelations_mc_pythia8_MinBias_13TeV_pythia8_noPU'
+config.Data.inputDataset='/MinBias_TuneCUETP8M1_13TeV_PYTHIA8/RunIIFall15MiniAODv2-noPU_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM'
+config.Data.splitting='EventAwareLumiBased'
+config.Data.unitsPerJob=100000
+config.General.workArea='decorrelations_mc_pythia8'
+config.General.requestName='decorrelations_mc_pythia8_MinBias_13TeV_pythia8_noPU'
+config.Data.outputDatasetTag='decorrelations_mc_pythia8_MinBias_13TeV_pythia8_noPU'
+config.Data.inputDataset='/MinBias_TuneCUETP8M1_13TeV_PYTHIA8/RunIIFall15MiniAODv2-noPU_76X_mcRun2_asymptotic_v12-v1/MINIAODSIM'
+config.Data.splitting='EventAwareLumiBased'
+config.Data.unitsPerJob=100000

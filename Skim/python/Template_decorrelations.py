@@ -2,7 +2,7 @@
 anaType="decorrelations"
 
 #file with list of samples
-dsFile="CommonFSQFramework/Skim/python/ds_mc_herwigpp.txt"
+dsFile="CommonFSQFramework/Skim/python/ds_mc_pythia8.txt"
 
 ###################################################################################
 # root path needs proper XXX
